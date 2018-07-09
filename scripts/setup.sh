@@ -55,7 +55,7 @@ if [[ $B2D_NO_AUTOSTART == '' ]]; then
 
 	# Check that Docker works
 	echo-green "Checking that everything is in place..."
-	docker version && vagrant ssh -c 'docker-compose --version'
+	docker version && docker-compose --version
 	if [[ $? -ne 0 ]]; then
 		echo -e "${red}Something went wrong. Please review console output for possible clues.${NC}"
 		exit 1
